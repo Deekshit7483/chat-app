@@ -1,0 +1,66 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/linear1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="8dp"
+		android:paddingTop="6dp"
+		android:paddingRight="8dp"
+		android:paddingBottom="6dp"
+		android:background="#FFFFFF"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<de.hdodenhof.circleimageview.CircleImageView
+			android:id="@+id/im_avatar"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginRight="8dp"
+			android:src="@drawable/upload_1"
+			app:civ_border_width="2dp"
+			app:civ_border_color="#008DCD"
+			app:civ_circle_background_color="#FFFFFF"
+			app:civ_border_overlay="true" />
+		<LinearLayout
+			android:id="@+id/linear3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/tx_name"
+				android:focusable="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="3dp"
+				android:text="Username"
+				android:textSize="18sp"
+				android:textColor="#000000" />
+			<TextView
+				android:id="@+id/tx_bio"
+				android:focusable="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="3dp"
+				android:text="Hey there I'm using WeChat."
+				android:textSize="14sp"
+				android:textColor="#9E9E9E"
+				android:singleLine="true"
+				android:layout_weight="1" />
+		</LinearLayout>
+		<ImageView
+			android:id="@+id/im_select"
+			android:focusable="false"
+			android:layout_width="22dp"
+			android:layout_height="22dp"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:src="@drawable/ic_check_circle_white"
+			android:scaleType="centerInside" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_coordinator"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/_app_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/AppTheme.AppBarOverlay">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/AppTheme.PopupOverlay" />
+	</com.google.android.material.appbar.AppBarLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<LinearLayout
+			android:id="@+id/linear_main"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#FFFFFF"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/l_item"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="15dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+				<LinearLayout
+					android:id="@+id/l_pic"
+					android:layout_width="70dp"
+					android:layout_height="70dp"
+					android:background="#0288D1"
+					android:gravity="center_horizontal|center_vertical"
+					android:orientation="vertical">
+					<ProgressBar
+						android:id="@+id/progressbar1"
+						android:layout_width="25dp"
+						android:layout_height="25dp"
+						android:indeterminate="false"
+						style="?android:progressBarStyle" />
+					<de.hdodenhof.circleimageview.CircleImageView
+						android:id="@+id/circleimageview1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/upload_1"
+						app:civ_border_width="3dp"
+						app:civ_border_color="#008DCD"
+						app:civ_circle_background_color="#FFFFFF"
+						app:civ_border_overlay="true" />
+				</LinearLayout>
+				<EditText
+					android:id="@+id/tx_group_name"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:layout_marginLeft="8dp"
+					android:paddingLeft="4dp"
+					android:paddingTop="8dp"
+					android:paddingRight="8dp"
+					android:paddingBottom="8dp"
+					android:gravity="center_vertical"
+					android:textSize="18sp"
+					android:textColor="#000000"
+					android:hint="Group Name"
+					android:textColorHint="#607D8B"
+					android:singleLine="true"
+					android:imeOptions="actionNext" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/linear1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:padding="8dp"
+				android:background="#EEEEEE"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/tx_participant_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Participants: 0"
+					android:textSize="16sp"
+					android:textColor="#000000" />
+			</LinearLayout>
+			<ListView
+				android:id="@+id/listview1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:choiceMode="none" />
+		</LinearLayout>
+	</LinearLayout>
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:layout_gravity="right|bottom"
+		app:srcCompat="@drawable/ic_arrow_forward_white" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
